@@ -1,0 +1,25 @@
+version: "3"
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 874ckM4m8494!
+      MYSQL_DATABASE: academease
+      MYSQL_USER: academease_pfa
+      MYSQL_PASSWORD: 874ckM4m8494!
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: 874ckM4m8494!
+      UPLOAD_LIMIT: 10000000000
+volumes:
+  db_data:
