@@ -5,9 +5,8 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 874ckM4m8494!
-      MYSQL_ROOT_USER: root
       MYSQL_DATABASE: academease
-      MYSQL_USER: rabieh
+      MYSQL_USER: academease_pfa
       MYSQL_PASSWORD: 874ckM4m8494!
     volumes:
       - db_data:/var/lib/mysql
@@ -22,26 +21,5 @@ services:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: 874ckM4m8494!
       UPLOAD_LIMIT: 10000000000
-
-  frontend:
-    image: react-app:latest
-    build:
-      context: ./front-gestionnaire-suivi
-      dockerfile: Dockerfile
-    ports:
-      - "5173:5173"
-    depends_on:
-      - backend
-
-  backend:
-    image: nestjs-app:latest
-    build:
-      context: ./back-gestionnaire-suivi
-      dockerfile: Dockerfile
-    ports:
-      - "3002:3002"
-    depends_on:
-      - db
-
 volumes:
   db_data:
