@@ -29,14 +29,9 @@ function Navbar() {
           <div className="flex">
             <Link to="/" className="flex-shrink-0 flex items-center">
               <img
-                className="block lg:hidden h-8 w-auto"
-                src="/logo.svg"
-                alt="Logo"
-              />
-              <img
                 className="hidden lg:block h-8 w-auto"
-                src="/logo.svg"
-                alt="Logo"
+                src="assets/graduation-home.svg"
+                alt="Logo fdfdf"
               />
             </Link>
           </div>

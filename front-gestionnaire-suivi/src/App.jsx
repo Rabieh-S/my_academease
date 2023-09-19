@@ -1,17 +1,14 @@
-import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import Signup from "./components/signUp";
-import Login from './components/Login';
-import Dashboard from "./components/Dashboard";
-import NotFound from './components/NotFound'
-import Home from './components/home'
-import Navbar from './components/navbar'
+import Signup from "./pages/signUp";
+import Login from './pages/Login';
+import NotFound from './pages/NotFound'
+import Home from './pages/Home'
 import Form from './components/Form';
 import AllUsers from './components/AllUsers'
 import Files from './components/Files'
 import Student from './components/AllUsersStudent'
 import EditUser from './components/EditUser'
-import Profile from './components/Profile'
+import Profile from './pages/Profile'
 
 function App() {
   return (
